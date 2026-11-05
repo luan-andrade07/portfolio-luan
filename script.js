@@ -1,32 +1,53 @@
 'use strict';
 
-// Menu mobile
+// A classe só é adicionada quando este arquivo realmente é executado.
+// Assim, sem JavaScript, o conteúdo continua visível por padrão.
+document.documentElement.classList.add('js-enabled');
+
+// Menu de navegação para telas menores.
 const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
+const navLinks = document.querySelector('#nav-links');
+
+function setMenuOpen(isOpen) {
+  if (!menuToggle || !navLinks) return;
+
+  navLinks.classList.toggle('open', isOpen);
+  menuToggle.setAttribute('aria-expanded', String(isOpen));
+  menuToggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+}
 
 if (menuToggle && navLinks) {
   menuToggle.addEventListener('click', () => {
-    const isOpen = navLinks.classList.toggle('open');
-    menuToggle.setAttribute('aria-expanded', String(isOpen));
-    menuToggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+    const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+    setMenuOpen(!isOpen);
   });
 
   navLinks.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      menuToggle.setAttribute('aria-expanded', 'false');
-      menuToggle.setAttribute('aria-label', 'Abrir menu');
-    });
+    link.addEventListener('click', () => setMenuOpen(false));
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true') {
+      setMenuOpen(false);
+      menuToggle.focus();
+    }
+  });
+
+  // Fecha o menu caso a janela volte ao tamanho de desktop.
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 600) setMenuOpen(false);
   });
 }
 
-// Filtro de projetos
+// Filtro acessível para os cartões de projetos.
 const filterButtons = document.querySelectorAll('.filter-button');
 const projectCards = document.querySelectorAll('.project-card');
+const filterEmpty = document.querySelector('#filter-empty');
 
 filterButtons.forEach((button) => {
   button.addEventListener('click', () => {
     const selectedFilter = button.dataset.filter;
+    let visibleProjects = 0;
 
     filterButtons.forEach((item) => {
       const isActive = item === button;
@@ -36,20 +57,23 @@ filterButtons.forEach((button) => {
 
     projectCards.forEach((card) => {
       const shouldShow = selectedFilter === 'todos' || card.dataset.category === selectedFilter;
-      card.classList.toggle('is-hidden', !shouldShow);
+      card.hidden = !shouldShow;
+      if (shouldShow) visibleProjects += 1;
     });
+
+    if (filterEmpty) filterEmpty.hidden = visibleProjects > 0;
   });
 });
 
-// Animação discreta ao entrar na tela; respeita a preferência por movimento reduzido.
-const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+// Animações de entrada: o conteúdo permanece visível se o recurso não existir.
+const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false;
 const revealItems = document.querySelectorAll('.reveal');
 
-if ('IntersectionObserver' in window && !reduceMotion) {
+if (!reduceMotion && 'IntersectionObserver' in window) {
   const observer = new IntersectionObserver((entries, currentObserver) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
+        entry.target.classList.add('is-visible');
         currentObserver.unobserve(entry.target);
       }
     });
@@ -57,9 +81,9 @@ if ('IntersectionObserver' in window && !reduceMotion) {
 
   revealItems.forEach((item) => observer.observe(item));
 } else {
-  revealItems.forEach((item) => item.classList.add('visible'));
+  revealItems.forEach((item) => item.classList.add('is-visible'));
 }
 
-// Ano automático no rodapé.
+// Atualiza automaticamente o ano do rodapé.
 const yearElement = document.querySelector('#current-year');
 if (yearElement) yearElement.textContent = String(new Date().getFullYear());
