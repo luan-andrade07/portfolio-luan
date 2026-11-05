@@ -4,18 +4,29 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#090d16">
-  <meta name="description" content="Portfólio de Kerlison Luan Andrade Lopes — estudante de ADS interessado em dados e desenvolvimento de software.">
-  <title>Kerlison Luan | Dados & Desenvolvimento</title>
+  <meta name="description" content="Portfólio de Kerlison Luan Andrade Lopes, estudante de Análise e Desenvolvimento de Sistemas na PUC Minas, com interesse em Dados e Desenvolvimento Backend.">
+  <meta name="author" content="Kerlison Luan Andrade Lopes">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Kerlison Luan | Dados & Desenvolvimento">
+  <meta property="og:description" content="Conheça meus estudos, habilidades e projetos em Dados e Desenvolvimento de Software.">
+  <meta property="og:url" content="https://luan-andrade07.github.io/portfolio-luan/">
+  <link rel="canonical" href="https://luan-andrade07.github.io/portfolio-luan/">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
+  <title>Kerlison Luan | Dados & Desenvolvimento</title>
 </head>
 <body>
   <a class="skip-link" href="#principal">Pular para o conteúdo</a>
 
   <header class="site-header">
     <nav class="nav container" aria-label="Navegação principal">
-      <a class="brand" href="#inicio" aria-label="Ir para o início">
-        <span class="brand-mark">KL</span>
+      <a class="brand" href="#inicio" aria-label="Kerlison Luan — início">
+        <span class="brand-mark" aria-hidden="true">KL</span>
         <span>Kerlison Luan<span class="brand-dot">.</span></span>
       </a>
 
@@ -33,127 +44,133 @@
   </header>
 
   <main id="principal">
-    <section class="hero section container" id="inicio">
+    <section class="hero section container" id="inicio" aria-labelledby="hero-title">
       <div class="hero-copy reveal">
-        <p class="eyebrow"><span class="status-dot"></span> Disponível para oportunidades de estágio</p>
-        <h1>Transformando<br>dados em <span class="gradient-text">soluções.</span></h1>
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Buscando oportunidade de estágio</p>
+        <h1 id="hero-title">Transformando<br>dados em <span class="gradient-text">soluções.</span></h1>
         <p class="hero-description">
-          Olá! Sou <strong>Kerlison Luan</strong>, estudante de Análise e Desenvolvimento de Sistemas.
-          Tenho interesse em tecnologia, dados e desenvolvimento de software — e gosto de transformar
-          problemas em soluções práticas.
+          Olá! Sou <strong>Kerlison Luan</strong>, estudante de Análise e Desenvolvimento de Sistemas na PUC Minas.
+          Tenho interesse em Dados e Desenvolvimento Backend e venho ampliando meus conhecimentos em Python,
+          SQL, MySQL e Node.js por meio de estudos e projetos práticos.
         </p>
         <div class="hero-actions">
           <a class="button button-primary" href="#projetos">Ver meus projetos <span aria-hidden="true">↘</span></a>
-          <a class="button button-secondary" href="#contato">Vamos conversar</a>
+          <a class="button button-secondary" href="#contato">Entrar em contato</a>
         </div>
-        <div class="hero-meta">
-          <span><span class="meta-icon">⌘</span> Python · SQL · MySQL</span>
-          <span><span class="meta-icon">⌖</span> PUC Minas · ADS</span>
+        <div class="hero-meta" aria-label="Resumo do perfil">
+          <span><span class="meta-icon" aria-hidden="true">⌘</span> Python · SQL · MySQL</span>
+          <span><span class="meta-icon" aria-hidden="true">⌖</span> PUC Minas · ADS</span>
         </div>
       </div>
 
-      <div class="hero-visual reveal" aria-label="Resumo visual das áreas de interesse">
-        <div class="orbit orbit-one"></div>
-        <div class="orbit orbit-two"></div>
+      <div class="hero-visual" role="img" aria-label="Ilustração de código Python e referências a dados">
+        <div class="orbit orbit-one" aria-hidden="true"></div>
+        <div class="orbit orbit-two" aria-hidden="true"></div>
         <div class="code-card">
-          <div class="code-top"><span></span><span></span><span></span><small>perfil.py</small></div>
+          <div class="code-top" aria-hidden="true"><span></span><span></span><span></span><small>perfil.py</small></div>
           <pre><code><span class="code-purple">class</span> <span class="code-green">Desenvolvedor</span>:
-  foco = [
-    <span class="code-yellow">"Dados"</span>,
-    <span class="code-yellow">"Python"</span>,
-    <span class="code-yellow">"SQL"</span>
-  ]
+    foco = [
+        <span class="code-yellow">"Dados"</span>,
+        <span class="code-yellow">"Python"</span>,
+        <span class="code-yellow">"SQL"</span>
+    ]
 
-  <span class="code-purple">def</span> <span class="code-blue">aprender</span>(self):
-    <span class="code-purple">return</span> <span class="code-yellow">"sempre"</span></code></pre>
-          <div class="code-footer"><span class="status-dot"></span> construindo e aprendendo</div>
+    <span class="code-purple">def</span> <span class="code-blue">aprender</span>(self):
+        <span class="code-purple">return</span> <span class="code-yellow">"sempre"</span></code></pre>
+          <div class="code-footer"><span class="status-dot" aria-hidden="true"></span> construindo e aprendendo</div>
         </div>
-        <div class="floating-chip chip-python"><span>Py</span> Python</div>
-        <div class="floating-chip chip-sql"><span>▤</span> SQL</div>
-        <div class="floating-chip chip-data"><span>◈</span> Data</div>
+        <div class="floating-chip chip-python"><span aria-hidden="true">Py</span> Python</div>
+        <div class="floating-chip chip-sql"><span aria-hidden="true">▤</span> SQL</div>
+        <div class="floating-chip chip-data"><span aria-hidden="true">◈</span> Dados</div>
       </div>
-      <a class="scroll-hint" href="#sobre"><span></span> Role para explorar</a>
+      <a class="scroll-hint" href="#sobre"><span aria-hidden="true"></span> Role para explorar</a>
     </section>
 
-    <section class="section section-border" id="sobre">
+    <section class="section section-border" id="sobre" aria-labelledby="sobre-title">
       <div class="container two-column">
         <div class="section-heading reveal">
           <p class="eyebrow">01 / Sobre mim</p>
-          <h2>Tecnologia com<br><span class="gradient-text">propósito.</span></h2>
+          <h2 id="sobre-title">Tecnologia com<br><span class="gradient-text">propósito.</span></h2>
         </div>
         <div class="about-copy reveal">
-          <p class="lead">Sou estudante de ADS na PUC Minas e estou construindo minha trajetória na área de tecnologia.</p>
-          <p>Tenho direcionado meus estudos para programação, banco de dados e tratamento de informações. Quero evoluir em projetos que unam lógica, organização de dados e desenvolvimento de soluções úteis.</p>
-          <p>Valorizo aprender na prática, trabalhar em equipe e entender o problema antes de escolher a solução.</p>
-          <div class="about-facts">
+          <p class="lead">Sou estudante de Análise e Desenvolvimento de Sistemas na PUC Minas e estou construindo minha trajetória na área de tecnologia.</p>
+          <p>Tenho direcionado meus estudos para programação, banco de dados e tratamento de informações. Gosto de entender o problema, organizar os dados e desenvolver soluções que sejam úteis e bem estruturadas.</p>
+          <p>Nos projetos acadêmicos, venho praticando desenvolvimento backend, criação de APIs e integração com bancos de dados. Busco uma oportunidade de estágio para aprender com equipes experientes e contribuir com dedicação.</p>
+          <div class="about-facts" aria-label="Informações acadêmicas e interesses">
             <div><strong>ADS</strong><span>Graduação · PUC Minas</span></div>
-            <div><strong>Dados + Dev</strong><span>Áreas de interesse</span></div>
-            <div><strong>Aprendizado</strong><span>Contínuo e prático</span></div>
+            <div><strong>Dados + Backend</strong><span>Áreas de interesse</span></div>
+            <div><strong>Prática</strong><span>Aprendizado contínuo</span></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-border" id="habilidades">
+    <section class="section section-border" id="habilidades" aria-labelledby="habilidades-title">
       <div class="container">
         <div class="section-heading centered reveal">
           <p class="eyebrow">02 / Habilidades</p>
-          <h2>Ferramentas que estou<br><span class="gradient-text">desenvolvendo.</span></h2>
-          <p class="section-intro">Tecnologias que fazem parte dos meus estudos e projetos. A lista será atualizada conforme eu avançar.</p>
+          <h2 id="habilidades-title">Tecnologias que estou<br><span class="gradient-text">estudando e aplicando.</span></h2>
+          <p class="section-intro">Conhecimentos desenvolvidos nos estudos e em projetos acadêmicos. Esta seção evolui conforme ganho experiência prática.</p>
         </div>
 
         <div class="skills-grid">
           <article class="skill-card reveal">
-            <div class="skill-icon icon-python">Py</div>
+            <div class="skill-icon icon-python" aria-hidden="true">Py</div>
+            <p class="skill-category">Programação e dados</p>
             <h3>Python</h3>
-            <p>Programação, automação e manipulação de dados.</p>
-            <span class="skill-type">Linguagem</span>
+            <p>Lógica de programação, scripts e manipulação de informações.</p>
           </article>
           <article class="skill-card reveal">
-            <div class="skill-icon icon-sql">▤</div>
+            <div class="skill-icon icon-sql" aria-hidden="true">SQL</div>
+            <p class="skill-category">Banco de dados</p>
             <h3>SQL</h3>
             <p>Consultas, filtros, relacionamentos e organização de dados.</p>
-            <span class="skill-type">Banco de dados</span>
           </article>
           <article class="skill-card reveal">
-            <div class="skill-icon icon-mysql">◉</div>
+            <div class="skill-icon icon-mysql" aria-hidden="true">My</div>
+            <p class="skill-category">Banco de dados</p>
             <h3>MySQL</h3>
-            <p>Modelagem e gerenciamento de bancos relacionais.</p>
-            <span class="skill-type">Banco de dados</span>
+            <p>Banco relacional, estruturação e consultas a dados.</p>
           </article>
           <article class="skill-card reveal">
-            <div class="skill-icon icon-js">JS</div>
-            <h3>JavaScript / Node.js</h3>
-            <p>Lógica de programação e desenvolvimento de APIs.</p>
-            <span class="skill-type">Desenvolvimento</span>
+            <div class="skill-icon icon-node" aria-hidden="true">JS</div>
+            <p class="skill-category">Desenvolvimento backend</p>
+            <h3>JavaScript e Node.js</h3>
+            <p>Lógica, rotas e construção de funcionalidades no servidor.</p>
           </article>
           <article class="skill-card reveal">
-            <div class="skill-icon icon-mongo">◌</div>
+            <div class="skill-icon icon-express" aria-hidden="true">Ex</div>
+            <p class="skill-category">Desenvolvimento backend</p>
+            <h3>Express</h3>
+            <p>Estruturação de APIs REST e organização de rotas.</p>
+          </article>
+          <article class="skill-card reveal">
+            <div class="skill-icon icon-mongo" aria-hidden="true">No</div>
+            <p class="skill-category">Banco de dados NoSQL</p>
             <h3>MongoDB</h3>
-            <p>Persistência e consulta de dados em banco NoSQL.</p>
-            <span class="skill-type">Banco de dados</span>
+            <p>Persistência e consulta de documentos em aplicações.</p>
           </article>
           <article class="skill-card reveal">
-            <div class="skill-icon icon-git">⌥</div>
-            <h3>Git / GitHub</h3>
-            <p>Versionamento de código e colaboração em projetos.</p>
-            <span class="skill-type">Ferramentas</span>
+            <div class="skill-icon icon-git" aria-hidden="true">Git</div>
+            <p class="skill-category">Ferramentas</p>
+            <h3>Git e GitHub</h3>
+            <p>Versionamento, organização de repositórios e colaboração.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-border" id="projetos">
+    <section class="section section-border" id="projetos" aria-labelledby="projetos-title">
       <div class="container">
         <div class="projects-heading reveal">
           <div class="section-heading">
             <p class="eyebrow">03 / Projetos</p>
-            <h2>Aprendizado que sai<br><span class="gradient-text">do papel.</span></h2>
+            <h2 id="projetos-title">Aprendizado que sai<br><span class="gradient-text">do papel.</span></h2>
           </div>
-          <p class="projects-note">Projetos acadêmicos e práticos. Os itens marcados como “planejado” ainda não devem ser apresentados como trabalhos concluídos.</p>
+          <p class="projects-note">Aqui estão projetos acadêmicos e ideias em preparação. Os status indicam claramente o que está em andamento e o que ainda será desenvolvido.</p>
         </div>
 
-        <div class="project-filters reveal" role="group" aria-label="Filtrar projetos">
+        <div class="project-filters reveal" role="group" aria-label="Filtrar projetos por área">
           <button class="filter-button active" type="button" data-filter="todos" aria-pressed="true">Todos</button>
           <button class="filter-button" type="button" data-filter="dados" aria-pressed="false">Dados</button>
           <button class="filter-button" type="button" data-filter="desenvolvimento" aria-pressed="false">Desenvolvimento</button>
@@ -161,7 +178,7 @@
 
         <div class="projects-grid" id="projects-grid">
           <article class="project-card project-featured reveal" data-category="desenvolvimento">
-            <div class="project-art oz-art">
+            <div class="project-art oz-art" aria-hidden="true">
               <div class="oz-window">
                 <div class="oz-window-top"><span></span><span></span><span></span></div>
                 <div class="oz-logo">O<span>Z</span></div>
@@ -171,31 +188,37 @@
               <span class="art-label">PROJETO ACADÊMICO</span>
             </div>
             <div class="project-content">
-              <div class="project-topline"><span class="project-category">Desenvolvimento · Backend</span><span class="project-status status-progress">Em desenvolvimento</span></div>
+              <div class="project-topline">
+                <span class="project-category">Desenvolvimento · Backend</span>
+                <span class="project-status status-progress">Em desenvolvimento</span>
+              </div>
               <h3>OZAMIGOS</h3>
-              <p>Plataforma colaborativa para grupos de amigos organizarem eventos, arquivos e informações compartilhadas. Minha atuação envolve o desenvolvimento do backend e da central de mídias.</p>
-              <div class="tag-list"><span>Node.js</span><span>Express</span><span>MongoDB</span><span>API REST</span></div>
-              <div class="project-links"><span class="text-link muted-link">Código e demonstração: adicionar links</span><span class="project-number">01</span></div>
+              <p>Plataforma colaborativa para grupos de amigos organizarem eventos, arquivos e informações compartilhadas.</p>
+              <p class="project-contribution"><strong>Minha contribuição:</strong> desenvolvimento de funcionalidades do backend e da Central de Mídias, incluindo rotas para envio e consulta de arquivos e trabalho de integração com a autenticação.</p>
+              <div class="tag-list" aria-label="Tecnologias utilizadas"><span>Node.js</span><span>Express</span><span>MongoDB</span><span>API REST</span></div>
+              <p class="project-footnote">Projeto acadêmico colaborativo. O repositório do grupo não está vinculado nesta página.</p>
+              <span class="project-number" aria-hidden="true">01</span>
             </div>
           </article>
 
           <article class="project-card reveal" data-category="dados">
-            <div class="project-art pipeline-art">
+            <div class="project-art pipeline-art" aria-hidden="true">
               <div class="pipeline-flow"><span>API</span><b>→</b><span>Python</span><b>→</b><span>SQL</span></div>
               <div class="pipeline-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
               <span class="art-label">IDEIA DE PROJETO</span>
             </div>
             <div class="project-content">
-              <div class="project-topline"><span class="project-category">Dados</span><span class="project-status status-planned">Planejado</span></div>
+              <div class="project-topline"><span class="project-category">Dados · ETL</span><span class="project-status status-planned">Planejado</span></div>
               <h3>Pipeline de dados</h3>
-              <p>Construir um fluxo para coletar dados de uma API, tratar inconsistências com Python e armazenar os resultados em um banco relacional.</p>
+              <p>Projeto planejado para coletar dados de uma API, tratar inconsistências com Python e armazenar os resultados em um banco relacional.</p>
               <div class="tag-list"><span>Python</span><span>Pandas</span><span>MySQL</span><span>ETL</span></div>
-              <div class="project-links"><span class="text-link muted-link">Em breve</span><span class="project-number">02</span></div>
+              <p class="project-footnote">Ainda não iniciado — será atualizado quando houver uma versão funcional.</p>
+              <span class="project-number" aria-hidden="true">02</span>
             </div>
           </article>
 
           <article class="project-card reveal" data-category="dados">
-            <div class="project-art dashboard-art">
+            <div class="project-art dashboard-art" aria-hidden="true">
               <div class="dash-head"><span></span><span></span><span></span></div>
               <div class="dash-content"><div class="dash-kpi"><i></i><i></i><i></i></div><div class="dash-chart"><b style="height:35%"></b><b style="height:64%"></b><b style="height:48%"></b><b style="height:82%"></b><b style="height:58%"></b><b style="height:92%"></b></div></div>
               <span class="art-label">IDEIA DE PROJETO</span>
@@ -203,27 +226,28 @@
             <div class="project-content">
               <div class="project-topline"><span class="project-category">Dados · Análise</span><span class="project-status status-planned">Planejado</span></div>
               <h3>Dashboard de indicadores</h3>
-              <p>Explorar uma base de vendas, criar consultas SQL para gerar indicadores e apresentar os resultados em um painel interativo.</p>
+              <p>Projeto planejado para explorar uma base de vendas, criar consultas SQL e apresentar indicadores em um painel interativo.</p>
               <div class="tag-list"><span>SQL</span><span>MySQL</span><span>Power BI ou Streamlit</span></div>
-              <div class="project-links"><span class="text-link muted-link">Em breve</span><span class="project-number">03</span></div>
+              <p class="project-footnote">Ainda não iniciado — será atualizado quando houver uma versão funcional.</p>
+              <span class="project-number" aria-hidden="true">03</span>
             </div>
           </article>
         </div>
+        <p class="filter-empty" id="filter-empty" hidden>Nenhum projeto encontrado nesta categoria.</p>
       </div>
     </section>
 
-    <section class="section section-border" id="contato">
+    <section class="section section-border" id="contato" aria-labelledby="contato-title">
       <div class="container contact-panel reveal">
         <div>
           <p class="eyebrow">04 / Contato</p>
-          <h2>Vamos construir<br>algo <span class="gradient-text">interessante?</span></h2>
-          <p class="contact-description">Estou aberto a oportunidades de estágio, projetos acadêmicos e conexões na área de tecnologia.</p>
+          <h2 id="contato-title">Vamos construir<br>algo <span class="gradient-text">interessante?</span></h2>
+          <p class="contact-description">Estou aberto a oportunidades de estágio, projetos acadêmicos e conexões na área de tecnologia. Será um prazer conversar!</p>
         </div>
-        <div class="contact-actions">
-          <!-- SUBSTITUA os links abaixo pelos seus endereços reais antes de publicar. -->
-          <a class="contact-link" href="mailto:kerlisonluan7@gmail.com" aria-label="Enviar e-mail">E-mail <span>↗</span></a>
-          <a class="contact-link" href="https://github.com/luan-andrade07" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
-          <a class="contact-link" href="https://www.linkedin.com/in/kerlison-luan-8558a428a" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a>
+        <div class="contact-actions" aria-label="Canais de contato">
+          <a class="contact-link" href="mailto:kerlisonluan7@gmail.com" aria-label="Enviar e-mail">E-mail <span aria-hidden="true">↗</span></a>
+          <a class="contact-link" href="https://github.com/luan-andrade07" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <a class="contact-link" href="https://www.linkedin.com/in/kerlison-luan-8558a428a" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
@@ -231,7 +255,10 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <a class="brand footer-brand" href="#inicio"><span class="brand-mark">KL</span><span>Kerlison Luan<span class="brand-dot">.</span></span></a>
+      <a class="brand footer-brand" href="#inicio" aria-label="Voltar ao início">
+        <span class="brand-mark" aria-hidden="true">KL</span>
+        <span>Kerlison Luan<span class="brand-dot">.</span></span>
+      </a>
       <p>Feito com dedicação · <span id="current-year">2026</span></p>
       <a class="back-top" href="#inicio">Voltar ao topo ↑</a>
     </div>
