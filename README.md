@@ -1,12 +1,12 @@
 # Portfólio — Kerlison Luan
 
-Portfólio pessoal responsivo com foco em **Dados e Desenvolvimento**, criado com HTML, CSS e JavaScript puro.
+Portfólio pessoal responsivo com foco em Dados e Desenvolvimento Backend, criado com HTML, CSS e JavaScript puro.
 
-## Como visualizar
+## Visualizar localmente
 
-1. Baixe ou extraia esta pasta.
-2. Abra o arquivo `index.html` no navegador.
-3. Para editar, abra a pasta no Visual Studio Code.
+1. Baixe ou clone o repositório.
+2. Abra a pasta no Visual Studio Code.
+3. Abra o `index.html` diretamente no navegador ou utilize a extensão Live Server.
 
 Não é necessário instalar dependências ou executar `npm install`.
 
@@ -14,30 +14,43 @@ Não é necessário instalar dependências ou executar `npm install`.
 
 ```text
 portfolio-luan/
-├── index.html   # Conteúdo e estrutura das seções
-├── styles.css   # Identidade visual, layout e responsividade
-├── script.js    # Menu mobile, filtros e pequenas interações
-└── README.md    # Instruções
+├── assets/
+│   └── favicon.svg
+├── index.html
+├── styles.css
+├── script.js
+└── README.md
 ```
 
-## Antes de publicar
+## Tecnologias
 
-- [ ] Confira nome, curso e apresentação.
-- [ ] Troque `SEU_EMAIL_AQUI` pelo e-mail profissional.
-- [ ] Troque `SEU_USUARIO` pelos usuários reais do GitHub e LinkedIn.
-- [ ] Adicione links para os repositórios e demonstrações dos projetos.
-- [ ] Atualize o status dos projetos para refletir o que realmente foi concluído.
-- [ ] Não publique senhas, tokens, chaves de API ou arquivos `.env`.
+- HTML5
+- CSS3
+- JavaScript (vanilla)
+- Google Fonts (com fontes alternativas locais)
 
-## Publicar com GitHub Pages
+## Publicação
 
-1. Crie um repositório público no GitHub, por exemplo `portfolio`.
-2. Envie os arquivos desta pasta para a raiz do repositório.
-3. No GitHub, abra **Settings → Pages**.
-4. Em **Build and deployment**, selecione **Deploy from a branch**.
-5. Escolha a branch `main` e a pasta `/ (root)`; salve.
-6. Aguarde a publicação indicada pelo GitHub Pages e abra o endereço exibido nessa tela.
+Este repositório utiliza GitHub Actions para publicar o conteúdo estático no GitHub Pages.
 
-## Personalização
+1. Faça as alterações nos arquivos.
+2. Envie um commit para o repositório.
+3. Acompanhe a execução do workflow na aba **Actions**.
+4. Quando a execução terminar com sucesso, acesse: <https://luan-andrade07.github.io/portfolio-luan/>.
 
-O visual utiliza fontes do Google Fonts. Caso não estejam disponíveis, o navegador usa fontes alternativas do sistema. Cores principais, fontes e espaçamentos estão definidos no começo de `styles.css`, dentro de `:root`.
+## Personalização antes de divulgar
+
+- Revise os textos de apresentação e as habilidades para refletirem seus conhecimentos atuais.
+- Confira o e-mail, o GitHub e o LinkedIn na seção de contato.
+- Adicione o link do repositório do OZAMIGOS somente quando puder compartilhar o endereço correto.
+- Atualize os projetos planejados apenas quando tiver uma versão real para apresentar.
+- Para adicionar um currículo, coloque o PDF em `assets/` e crie um link no HTML apontando para o arquivo.
+- Não publique senhas, tokens, chaves de API ou arquivos `.env`.
+
+## Acessibilidade e desempenho
+
+- Estrutura semântica e link para pular ao conteúdo.
+- Navegação por teclado e estados acessíveis no menu e nos filtros.
+- Conteúdo visível mesmo quando JavaScript ou `IntersectionObserver` não estiver disponível.
+- Respeito à preferência do sistema por movimento reduzido.
+- Sem bibliotecas JavaScript externas.
